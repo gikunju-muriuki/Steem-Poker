@@ -2,9 +2,8 @@ name: Poker Upvote
 
 on:
   schedule:
-    # Runs at 12:10 AM EAT
-    - cron: '1 * * * *'
-  workflow_dispatch: # Allows manual verification tests via the UI button
+    - cron: '*/20 * * * *'   # every 20 minutes (UTC)
+  workflow_dispatch:         # optional: allow manual run from GitHub UI
 
 jobs:
   auto-upvote:
@@ -27,4 +26,4 @@ jobs:
       - name: Run Poker Bot
         env:
           STEEM_POSTING_KEY: ${{ secrets.STEEM_POSTING_KEY }}
-        run: python upvote_bot.py
+        run: python poker.py
