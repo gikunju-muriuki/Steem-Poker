@@ -22,7 +22,7 @@ time.sleep(total_delay_seconds)
 MY_ACCOUNT = "blog.god"            # Your Steem account name
 TARGET_AUTHOR = "playpoker"            # The account you want to auto-upvote
 VOTE_WEIGHT = 100                 # FIX: Defined weight as integer (1 to 100)
-PROXY_URL = "https://poker-proxy.gikunju.workers.dev"
+PROXY_URL = "https://steem-proxy.gikunju.workers.dev"
 
 # 2. Extract Key from GitHub Secrets
 MY_PRIVATE_POSTING_KEY = os.getenv("STEEM_POSTING_KEY")
